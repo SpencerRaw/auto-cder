@@ -1,0 +1,22 @@
+{
+  "name": "cd-literature",
+  "version": "0.1.0",
+  "description": "Carbon dot literature retrieval and gap analysis — multi-source search, protocol extraction, novelty identification",
+  "author": "Auto-CDer",
+  "license": "Apache-2.0",
+  "keywords": ["carbon-dots", "literature-review", "semantic-scholar", "gap-analysis", "systematic-review"],
+  "stages": [
+    "goal-disambiguation",
+    "multi-source-discovery",
+    "relevance-filtering",
+    "deep-reading",
+    "gap-analysis"
+  ],
+  "dependencies": {
+    "skills": ["cd-memory"],
+    "apis": ["semantic-scholar", "pubmed", "arxiv"]
+  },
+  "outputs": ["literature-report.yaml", "paper-abstracts/", "protocol-database/"],
+  "tier": "core",
+  "install": "auto-cder/skills@cd-literature"
+}

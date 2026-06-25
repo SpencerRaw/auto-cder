@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <!-- Gradient for the main carbon dot -->
+    <radialGradient id="cdCore" cx="45%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="40%" stop-color="#0288D1"/>
+      <stop offset="100%" stop-color="#01579B"/>
+    </radialGradient>
+
+    <!-- Fluorescence glow -->
+    <radialGradient id="fluorescence" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4FC3F7" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#29B6F6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4FC3F7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Emission ray gradient -->
+    <linearGradient id="rayBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4FC3F7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#4FC3F7" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="rayGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#81C784" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#81C784" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="rayPurple" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CE93D8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#CE93D8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Hexagon lattice pattern -->
+    <pattern id="lattice" x="0" y="0" width="28" height="48" patternUnits="userSpaceOnUse">
+      <path d="M14 0 L28 8 L28 24 L14 32 L0 24 L0 8 Z" fill="none" stroke="#B3E5FC" stroke-width="0.8" stroke-opacity="0.5"/>
+      <path d="M14 24 L28 32 L28 48 L14 56 L0 48 L0 32 Z" fill="none" stroke="#B3E5FC" stroke-width="0.8" stroke-opacity="0.5"/>
+    </pattern>
+
+    <!-- Small dot gradient -->
+    <radialGradient id="smallDot1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#81C784"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </radialGradient>
+
+    <radialGradient id="smallDot2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#CE93D8"/>
+      <stop offset="100%" stop-color="#7B1FA2"/>
+    </radialGradient>
+
+    <radialGradient id="smallDot3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB74D"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </radialGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#01579B"/>
+      <stop offset="50%" stop-color="#0288D1"/>
+      <stop offset="100%" stop-color="#4FC3F7"/>
+    </linearGradient>
+
+    <!-- Subtle shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#01579B" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- White background -->
+  <rect width="600" height="500" fill="#FFFFFF" rx="12"/>
+
+  <!-- Fluorescence halo -->
+  <ellipse cx="300" cy="210" rx="140" ry="130" fill="url(#fluorescence)"/>
+
+  <!-- Emission rays -->
+  <g opacity="0.7">
+    <!-- Top right blue ray -->
+    <line x1="330" y1="180" x2="460" y2="80" stroke="#4FC3F7" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <line x1="340" y1="170" x2="480" y2="60" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    <!-- Right green ray -->
+    <line x1="370" y1="210" x2="490" y2="210" stroke="#81C784" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="360" y1="200" x2="500" y2="195" stroke="#81C784" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    <!-- Bottom right ray -->
+    <line x1="340" y1="250" x2="460" y2="340" stroke="#CE93D8" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <!-- Bottom ray -->
+    <line x1="300" y1="270" x2="300" y2="390" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    <!-- Bottom left ray -->
+    <line x1="260" y1="250" x2="140" y2="340" stroke="#81C784" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <!-- Left ray -->
+    <line x1="230" y1="210" x2="110" y2="210" stroke="#CE93D8" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+    <!-- Top left ray -->
+    <line x1="260" y1="180" x2="140" y2="80" stroke="#4FC3F7" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <line x1="270" y1="170" x2="120" y2="60" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  </g>
+
+  <!-- Main carbon dot (large) -->
+  <circle cx="300" cy="210" r="62" fill="url(#cdCore)" filter="url(#shadow)"/>
+
+  <!-- Lattice pattern on main dot -->
+  <circle cx="300" cy="210" r="62" fill="url(#lattice)"/>
+
+  <!-- Graphitic rings (concentric) -->
+  <circle cx="300" cy="210" r="48" fill="none" stroke="#B3E5FC" stroke-width="0.6" stroke-opacity="0.4"/>
+  <circle cx="300" cy="210" r="34" fill="none" stroke="#B3E5FC" stroke-width="0.6" stroke-opacity="0.4"/>
+  <circle cx="300" cy="210" r="20" fill="none" stroke="#B3E5FC" stroke-width="0.6" stroke-opacity="0.4"/>
+
+  <!-- Inner core highlight -->
+  <ellipse cx="285" cy="195" rx="25" ry="20" fill="#B3E5FC" opacity="0.3"/>
+
+  <!-- Surface functional groups (small dots on surface) -->
+  <circle cx="275" cy="155" r="4" fill="#81C784" opacity="0.8"/>
+  <circle cx="340" cy="175" r="3.5" fill="#CE93D8" opacity="0.8"/>
+  <circle cx="350" cy="230" r="4" fill="#FFB74D" opacity="0.8"/>
+  <circle cx="255" cy="245" r="3" fill="#81C784" opacity="0.8"/>
+  <circle cx="315" cy="155" r="3" fill="#FFB74D" opacity="0.8"/>
+  <circle cx="260" cy="175" r="3.5" fill="#CE93D8" opacity="0.8"/>
+  <circle cx="345" cy="200" r="3" fill="#81C784" opacity="0.8"/>
+  <circle cx="250" cy="215" r="3.5" fill="#FFB74D" opacity="0.8"/>
+
+  <!-- Surrounding smaller carbon dots -->
+  <!-- Top right small CD (green) -->
+  <circle cx="410" cy="130" r="18" fill="url(#smallDot1)" opacity="0.85"/>
+  <circle cx="410" cy="130" r="10" fill="none" stroke="#C8E6C9" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Right small CD (purple) -->
+  <circle cx="440" cy="230" r="14" fill="url(#smallDot2)" opacity="0.8"/>
+  <circle cx="440" cy="230" r="8" fill="none" stroke="#E1BEE7" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Bottom right small CD (orange) -->
+  <circle cx="390" cy="310" r="12" fill="url(#smallDot3)" opacity="0.75"/>
+  <circle cx="390" cy="310" r="7" fill="none" stroke="#FFE0B2" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Bottom left small CD (blue) -->
+  <circle cx="200" cy="310" r="16" fill="url(#cdCore)" opacity="0.7"/>
+  <circle cx="200" cy="310" r="9" fill="none" stroke="#B3E5FC" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Top left small CD (green) -->
+  <circle cx="180" cy="140" r="13" fill="url(#smallDot1)" opacity="0.7"/>
+  <circle cx="180" cy="140" r="7" fill="none" stroke="#C8E6C9" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Left small CD (purple) -->
+  <circle cx="140" cy="210" r="11" fill="url(#smallDot2)" opacity="0.75"/>
+  <circle cx="140" cy="210" r="6" fill="none" stroke="#E1BEE7" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Logo text -->
+  <text x="300" y="430" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="52" font-weight="700" fill="url(#textGrad)" letter-spacing="-0.5">
+    auto-cder
+  </text>
+
+  <!-- Subtitle -->
+  <text x="300" y="462" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="15" fill="#78909C" font-weight="400" letter-spacing="2">
+    AUTONOMOUS CARBON DOT EXPERIMENT RESEARCHER
+  </text>
+
+  <!-- Small decorative element: carbon hex ring -->
+  <g transform="translate(470, 370)" opacity="0.3">
+    <polygon points="15,0 30,8 30,24 15,32 0,24 0,8" fill="none" stroke="#0288D1" stroke-width="1.5"/>
+    <polygon points="15,24 30,32 30,48 15,56 0,48 0,32" fill="none" stroke="#0288D1" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(100, 370)" opacity="0.3">
+    <polygon points="12,0 24,6 24,18 12,24 0,18 0,6" fill="none" stroke="#4FC3F7" stroke-width="1.5"/>
+    <polygon points="12,18 24,24 24,36 12,42 0,36 0,24" fill="none" stroke="#4FC3F7" stroke-width="1.5"/>
+  </g>
+</svg>

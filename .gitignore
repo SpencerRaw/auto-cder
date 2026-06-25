@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# uv
+uv.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Auto-CDer
+~/.autocder/memory/embeddings/
+~/.autocder/sessions/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data
+*.h5
+*.hdf5
+*.pkl
+data/raw/
+data/processed/
+
+# Logs
+*.log
+logs/
+
+# Docker
+.docker/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml

@@ -1,0 +1,22 @@
+{
+  "name": "cd-application",
+  "version": "0.1.0",
+  "description": "Carbon dot application validation — sensing, bioimaging, catalysis, optoelectronic performance testing",
+  "author": "Auto-CDer",
+  "license": "Apache-2.0",
+  "keywords": ["carbon-dots", "sensing", "bioimaging", "catalysis", "LOD", "selectivity"],
+  "stages": [
+    "application-selection",
+    "protocol-design",
+    "execution",
+    "data-analysis",
+    "benchmark-comparison"
+  ],
+  "dependencies": {
+    "skills": ["cd-characterization", "cd-memory"],
+    "apis": ["semantic-scholar"]
+  },
+  "outputs": ["application-report.yaml", "calibration-curves/", "selectivity-plots/"],
+  "tier": "core",
+  "install": "auto-cder/skills@cd-application"
+}

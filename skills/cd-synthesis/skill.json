@@ -1,0 +1,22 @@
+{
+  "name": "cd-synthesis",
+  "version": "0.1.0",
+  "description": "Carbon dot synthesis protocol generation — precursor selection, doping strategy, method optimization",
+  "author": "Auto-CDer",
+  "license": "Apache-2.0",
+  "keywords": ["carbon-dots", "synthesis", "nanomaterials", "fluorescence", "hydrothermal"],
+  "stages": [
+    "precursor-analysis",
+    "doping-strategy",
+    "method-selection",
+    "condition-optimization",
+    "protocol-generation"
+  ],
+  "dependencies": {
+    "skills": ["cd-memory"],
+    "apis": ["semantic-scholar", "pubmed"]
+  },
+  "outputs": ["protocol.yaml", "synthesis-log.json"],
+  "tier": "core",
+  "install": "auto-cder/skills@cd-synthesis"
+}

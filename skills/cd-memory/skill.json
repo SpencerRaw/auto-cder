@@ -1,0 +1,23 @@
+{
+  "name": "cd-memory",
+  "version": "0.1.0",
+  "description": "Persistent CD research memory with dual-module architecture (M_I^CD + M_E^CD) and three self-evolution mechanisms (CD-IDE, CD-IVE, CD-ESE)",
+  "author": "Auto-CDer",
+  "license": "Apache-2.0",
+  "keywords": ["carbon-dots", "memory", "self-evolution", "IDE", "IVE", "ESE", "research-memory"],
+  "stages": [
+    "memory-retrieval",
+    "idea-direction-evolution",
+    "idea-validation-evolution",
+    "experiment-strategy-evolution",
+    "memory-update"
+  ],
+  "dependencies": {
+    "skills": [],
+    "apis": ["ollama-embeddings"]
+  },
+  "outputs": ["M_I^CD/", "M_E^CD/", "embeddings/"],
+  "tier": "core",
+  "persistence_path": "~/.autocder/memory/",
+  "install": "auto-cder/skills@cd-memory"
+}

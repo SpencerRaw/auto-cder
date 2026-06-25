@@ -1,0 +1,22 @@
+{
+  "name": "cd-characterization",
+  "version": "0.1.0",
+  "description": "Carbon dot characterization pipeline — optical, structural, surface chemistry analysis with data processing",
+  "author": "Auto-CDer",
+  "license": "Apache-2.0",
+  "keywords": ["carbon-dots", "characterization", "TEM", "XRD", "FTIR", "quantum-yield", "fluorescence"],
+  "stages": [
+    "optical-characterization",
+    "structural-characterization",
+    "surface-chemistry",
+    "data-processing",
+    "report-generation"
+  ],
+  "dependencies": {
+    "skills": ["cd-synthesis", "cd-memory"],
+    "apis": []
+  },
+  "outputs": ["characterization-report.yaml", "spectra-plots/", "tem-analysis/"],
+  "tier": "core",
+  "install": "auto-cder/skills@cd-characterization"
+}
